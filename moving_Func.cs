@@ -117,4 +117,29 @@
     {
         rigid.velocity = new Vector2(rigid.velocity.x, jumpForce);
     }
+        
+    // Execute inside the Update function
+    private void LookAtUD() // 위 아래 바라보기
+    {
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            head.transform.localEulerAngles = new Vector3(-55.4f, 0f, 43.38f);  // <- 
+            head.transform.localPosition = new Vector3(-0.14f, 1.65f, 0f);
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            head.transform.localEulerAngles = new Vector3(-50f, 0f, -60f);
+            head.transform.localPosition = new Vector3(0.88f, 1.64f, 0f);
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            head.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
+            head.transform.localPosition = new Vector3(0.4f, 1.91f, 0f);
+        }
+        else if (Input.GetKeyUp(KeyCode.S))
+        {
+            head.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
+            head.transform.localPosition = new Vector3(0.4f, 1.91f, 0f);
+        }
+    }
 
