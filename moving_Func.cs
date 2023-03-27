@@ -123,7 +123,7 @@
     {
         if(Input.GetKeyDown(KeyCode.W))
         {
-            head.transform.localEulerAngles = new Vector3(-55.4f, 0f, 43.38f);  // <- 
+            head.transform.localEulerAngles = new Vector3(-55.4f, 0f, 43.38f);  // <- this codes will be changed 
             head.transform.localPosition = new Vector3(-0.14f, 1.65f, 0f);
         }
         else if (Input.GetKeyDown(KeyCode.S))
